@@ -1,0 +1,74 @@
+{
+  "id": "de09d036-dd6a-40d6-b329-5ae6863c4cc9",
+  "prevId": "e5b1f5a3-a436-4f37-9b65-625ac9a7e804",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "gameRoom": {
+      "name": "gameRoom",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hostId": {
+          "name": "hostId",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "currentGameState": {
+          "name": "currentGameState",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "currentPlayer": {
+          "name": "currentPlayer",
+          "type": "char",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'w'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "user": {
+      "name": "user",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "currentPlayer": {
+      "name": "currentPlayer",
+      "values": {
+        "w": "w",
+        "b": "b"
+      }
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
