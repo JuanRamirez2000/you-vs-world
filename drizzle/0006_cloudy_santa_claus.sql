@@ -1,0 +1,1 @@
+ALTER TABLE "gameRoom" ALTER COLUMN "hostId" SET DATA TYPE text;

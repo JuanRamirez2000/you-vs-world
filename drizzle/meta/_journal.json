@@ -36,6 +36,20 @@
       "when": 1713672119024,
       "tag": "0004_neat_goblin_queen",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1713681987861,
+      "tag": "0005_smooth_thena",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1713723780007,
+      "tag": "0006_cloudy_santa_claus",
+      "breakpoints": true
     }
   ]
 }

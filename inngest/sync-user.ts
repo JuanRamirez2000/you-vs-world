@@ -3,12 +3,13 @@ import { inngest } from "./client";
 import { db } from "@/db/db";
 import { users } from "@/db/schema";
 
-const syncUser = inngest.createFunction(
+export const syncUser = inngest.createFunction(
   { id: "sync-user-from-clerk" }, // ←The 'id' is an arbitrary string used to identify the function in the dashboard
   { event: "clerk/user.created" },
   async ({ event }) => {
     const user = event.data as User;
     const { id } = user;
+    console.log(id);
     await db.insert(users).values({ id: id });
   }
 );

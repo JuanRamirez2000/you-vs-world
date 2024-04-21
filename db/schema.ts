@@ -16,7 +16,7 @@ export const users = pgTable("user", {
 
 export const gameRooms = pgTable("gameRoom", {
   id: serial("id").primaryKey(),
-  hostId: integer("hostId"),
+  hostId: text("hostId"),
   currentPlayerMove: char("currentPlayer", { enum: ["w", "b"] }).default("w"),
   pgn: text("pgn"),
   fen: text("fen"),

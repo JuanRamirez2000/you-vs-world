@@ -9,7 +9,8 @@
     "lint": "next lint",
     "generate": "drizzle-kit generate:pg",
     "migrate": "tsx db/migrate.ts main",
-    "studio": "drizzle-kit studio"
+    "studio": "drizzle-kit studio",
+    "inngest": "npx inngest-cli@latest dev"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.0.1",

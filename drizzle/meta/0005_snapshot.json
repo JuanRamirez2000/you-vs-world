@@ -1,0 +1,80 @@
+{
+  "id": "8f8cc4c2-fd64-486c-8c9c-5224ccd2fbd5",
+  "prevId": "de09d036-dd6a-40d6-b329-5ae6863c4cc9",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "gameRoom": {
+      "name": "gameRoom",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hostId": {
+          "name": "hostId",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "currentPlayer": {
+          "name": "currentPlayer",
+          "type": "char",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'w'"
+        },
+        "pgn": {
+          "name": "pgn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fen": {
+          "name": "fen",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "user": {
+      "name": "user",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "currentPlayer": {
+      "name": "currentPlayer",
+      "values": {
+        "w": "w",
+        "b": "b"
+      }
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
